@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project Coding Camp Software Engineering</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="main-wrapper">
+        <div class="todo-card">
+            <h1 class="app-title">Todo List</h1>
+
+            <div id="error-message" class="error-msg"></div>
+
+            <div class="input-group">
+                <input type="text" id="todo-input" placeholder="Add a todo...">
+                <input type="date" id="date-input">
+                <button id="add-btn" class="btn-add"><i class="fas fa-plus"></i></button>
+            </div>
+
+            <div class="control-group">
+                <div class="filter-wrapper">
+                    <select id="filter-todo" class="filter-select">
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="pending">Pending</option>
+                    </select>
+                </div>
+                <button onclick="deleteAll()" class="btn-delete-all">DELETE ALL</button>
+            </div>
+
+            <div class="table-container">
+                <table class="todo-table">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="todo-body">
+                        </tbody>
+                </table>
+                
+                <div id="empty-state" class="empty-state">
+                    No task found
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

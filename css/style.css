@@ -1,0 +1,221 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+body {
+    background-color: #f2efe4; 
+    color: #1a1a1a; 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.todo-card {
+    background-color: #fffbf0; 
+    width: 100%;
+    max-width: 700px;
+    padding: 2rem;
+    border-radius: 4px;
+    border: 2px solid #1a1a1a;
+    box-shadow: 8px 8px 0px #1a1a1a; 
+}
+
+.app-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.error-msg {
+    color: #d32f2f; 
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    height: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+input {
+    background-color: #fff;
+    border: 2px solid #1a1a1a; 
+    color: #1a1a1a;
+    padding: 12px 15px;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+input:focus {
+    background-color: #fff;
+    box-shadow: 4px 4px 0px #ddd; 
+}
+
+#todo-input {
+    flex: 2;
+}
+
+#date-input {
+    flex: 1;
+    color-scheme: light; 
+}
+
+.btn-add {
+    background-color: #1a1a1a; 
+    color: #f2efe4; 
+    border: 2px solid #1a1a1a;
+    width: 50px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+
+.btn-add:hover {
+    background-color: #fff;
+    color: #1a1a1a;
+}
+
+.control-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.filter-select {
+    background-color: #fff;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    border: 2px solid #1a1a1a;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+}
+
+.btn-delete-all {
+    background-color: #fff;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    border: 2px solid #1a1a1a;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    box-shadow: 3px 3px 0px #1a1a1a;
+    transition: 0.2s;
+}
+
+.btn-delete-all:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px #1a1a1a;
+    background-color: #fce4e4; 
+}
+
+.table-container {
+    background-color: #fff;
+    border: 2px solid #1a1a1a;
+    border-radius: 4px;
+    overflow: hidden;
+    min-height: 150px;
+    position: relative;
+}
+
+.todo-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.todo-table th {
+    background-color: #e6e2d3; 
+    color: #1a1a1a;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    padding: 15px;
+    border-bottom: 2px solid #1a1a1a;
+    font-weight: 900;
+}
+
+.todo-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #1a1a1a;
+}
+
+.status-pending {
+    background-color: #fff;
+    color: #1a1a1a;
+}
+
+.status-completed {
+    background-color: #1a1a1a; 
+    color: #fff; 
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-right: 10px;
+    transition: 0.2s;
+}
+
+.btn-check { color: #1a1a1a; }
+.btn-trash { color: #1a1a1a; }
+
+.btn-check:hover { color: #2e7d32; transform: scale(1.1); } 
+.btn-trash:hover { color: #c62828; transform: scale(1.1); } 
+
+.text-completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.empty-state {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #888;
+    font-size: 1rem;
+    font-weight: bold;
+    display: none;
+}
+
+.show-empty {
+    display: block;
+}
